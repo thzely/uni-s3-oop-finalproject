@@ -4,14 +4,14 @@ public class Cliente : Pessoa
         get; 
         private set; 
         }
-    public int Pontosfid { 
+    public int Pontosfid{ 
         get;
         private set;
         }
     public Cliente(string nome, string cpf, string email)
         : base(nome, cpf)
     {
-        Email     = email;
+        Email = email;
         Pontosfid = 0;
     }
     public Cliente(string nome, string cpf, string email, int pontosIniciais)
@@ -20,13 +20,10 @@ public class Cliente : Pessoa
         if (pontosIniciais < 0) throw new ArgumentException("Pontos não podem ser negativos.");
         Pontosfid = pontosIniciais;
     }
-
     public override string Identificar() =>
         $"Cliente: {Nome} | E-mail: {Email} | Pontos: {Pontosfid}";
-
     public void AdicionarPontos(int pontos) => Pontosfid += pontos;
-    public decimal ResgatarPontos(int pontos)
-    {
+    public decimal ResgatarPontos(int pontos){
         if (pontos < 100)
             throw new InvalidOperationException("Resgate mínimo: 100 pontos.");
         if (pontos > Pontosfid)

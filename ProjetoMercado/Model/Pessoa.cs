@@ -25,8 +25,6 @@ public abstract class Pessoa
         Nome = nome;
         CPF  = cpf;
     }
-
     public virtual string Identificar() => $"Pessoa: {Nome} | CPF: {CPF}";
-
     public override string ToString() => Identificar();
 }
