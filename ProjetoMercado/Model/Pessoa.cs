@@ -11,7 +11,8 @@ public abstract class Pessoa
         get;
         protected set;
     }
-    public string CPF  {
+
+    public string CPF {
         get;
         protected set;
     }
@@ -25,6 +26,7 @@ public abstract class Pessoa
         Nome = nome;
         CPF  = cpf;
     }
+
     public virtual string Identificar() => $"Pessoa: {Nome} | CPF: {CPF}";
     public override string ToString() => Identificar();
 }

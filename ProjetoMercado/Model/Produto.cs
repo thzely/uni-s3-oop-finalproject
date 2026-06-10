@@ -1,11 +1,35 @@
+using System;
+namespace Supermarket.model;
+
 public class Produto
 {
-    public int Id { get; private set; }
-    public string Nome { get; private set; }
-    public decimal Preco { get; private set; }
-    public int Estoque { get; private set; }
-    public string Categoria { get; private set; }
+    public int Id {
+        get;
+        private set;
+        }
+
+    public string Nome {
+        get;
+        private set;
+        }
+
+    public decimal Preco {
+        get;
+        private set;
+        }
+
+    public int Estoque {
+        get;
+        private set;
+        }
+
+    public string Categoria {
+        get;
+        private set;
+        }
+
     private static int _contador = 1;
+
     public Produto(string nome, decimal preco, int estoque, string categoria)
     {
         if (preco   <= 0) throw new ArgumentException("Preço deve ser positivo.");
@@ -16,7 +40,9 @@ public class Produto
         Estoque = estoque;
         Categoria = categoria;
     }
+
     public void Atualizar(decimal novoPreco) => Atualizar(novoPreco, Estoque);
+
     public void Atualizar(decimal novoPreco, int novoEstoque)
     {
         if (novoPreco   <= 0) throw new ArgumentException("Preço inválido.");
@@ -24,6 +50,7 @@ public class Produto
         Preco = novoPreco;
         Estoque = novoEstoque;
     }
+
     public void BaixarEstoque(int qtd)
     {
         if (qtd > Estoque)
@@ -31,6 +58,7 @@ public class Produto
                 $"Estoque insuficiente para '{Nome}'. Disponível: {Estoque}.");
         Estoque -= qtd;
     }
+
     public override string ToString() =>
         $"[#{Id}] {Nome} | R$ {Preco:F2} | Estoque: {Estoque} | {Categoria}";
 }
