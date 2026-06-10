@@ -1,3 +1,3 @@
-# uni-s3-oop-finalproject
+# Gerenciador de Supermercado
 
 Integrantes: Marianne Fisch e Henrique Zotti
