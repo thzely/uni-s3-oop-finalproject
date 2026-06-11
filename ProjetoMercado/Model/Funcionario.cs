@@ -24,9 +24,6 @@ public class Funcionario : Pessoa
     public override string Identificar() =>
         $"Funcionário: {Nome} | Cargo: {Cargo} | Salário: R$ {Salario:F2}";
 
-    public override string Identificar() =>
-        $"Funcionário: {Nome} | Cargo: {Cargo} | Salário: R$ {Salario:F2}";
-
     public void ReajustarSalario(decimal percentual)
     {
         if (percentual <= 0 || percentual > 30)

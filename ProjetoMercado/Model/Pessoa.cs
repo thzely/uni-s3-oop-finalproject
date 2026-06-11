@@ -1,10 +1,6 @@
 using System;
 namespace Supermarket.model;
 
-//model (c#)== classe(java)
-//nas classe, usa namespace Supermarket.model
-//dps coloca: Using Supermarket.model, na main
-
 public abstract class Pessoa
 {
     public string Nome {
