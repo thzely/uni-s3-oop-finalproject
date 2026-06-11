@@ -14,8 +14,8 @@ public class Supermercado
         private set;
     }
     private List<Produto> _produtos = new();
-    private List<Funcionario> _funcs    = new();
-    private List<Venda> _vendas   = new();
+    private List<Funcionario> _funcs = new();
+    private List<Venda> _vendas = new();
 
     public Supermercado(string nome, string cnpj){
         Nome = nome;
